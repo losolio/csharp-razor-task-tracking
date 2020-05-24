@@ -5,3 +5,23 @@
 }
 
 <h1>All Tasks</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Priority</th>
+    </tr>
+</thead>
+
+@foreach (Tasker.Task task in Model.Tasks) {
+    <tr>
+        <th>@task.Id</th>
+        <th>@task.Title</th>
+        <th>@task.Description</th>
+        <th>@task.Priority</th>
+    </tr>
+}
+</table>
