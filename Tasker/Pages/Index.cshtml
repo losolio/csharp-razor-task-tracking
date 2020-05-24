@@ -8,20 +8,20 @@
 
 <table>
     <thead>
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Priority</th>
-    </tr>
-</thead>
-
-@foreach (Tasker.Task task in Model.Tasks) {
-    <tr>
-        <th>@task.Id</th>
-        <th>@task.Title</th>
-        <th>@task.Description</th>
-        <th>@task.Priority</th>
-    </tr>
-}
-</table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+        </tr>
+    </thead>
+    @foreach (var task in Model.Tasks)
+    {
+        <tr>
+            <td>@task.Id</td>
+            <td>@task.Title</td>
+            <td>@task.Description</td>
+            <td>@task.Priority</td>
+        </tr>
+    }
+</table> 
